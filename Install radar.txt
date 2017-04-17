@@ -1,0 +1,14 @@
+Radar.sqf installation guide
+
+Step 1:  Replace old file with new: core\cop\fn_radar.sqf
+
+Step 2: Add this to fn_keyHandler:
+ 
+// Case 181 is the "/" key beside numlock.
+case 181:
+{
+	if (!_alt && !_ctrlKey && playerSide == west) then
+	{
+		[] call life_fnc_radar;
+	};
+}; 
